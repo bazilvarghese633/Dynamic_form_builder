@@ -1,0 +1,1776 @@
+{
+  "sample_json": [
+    {
+      "name": "Planning",
+      "is_selected": true,
+      "generic_data": [
+        {
+          "generic_data_name": "Sprint Setup",
+          "is_generic_data_selected": true,
+          "generic_data_subData": [
+            {
+              "component_name": "Sprint Setup mode",
+              "uid": "planning_sprint_1",
+              "component_data": [
+                {
+                  "name": "Remote",
+                  "uid": "planning_sprint_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Hybrid",
+                  "uid": "planning_sprint_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Onsite",
+                  "uid": "planning_sprint_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for sprint setup",
+              "uid": "planning_sprint_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Docs",
+                  "uid": "planning_sprint_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Whiteboard",
+                  "uid": "planning_sprint_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Spreadsheet",
+                  "uid": "planning_sprint_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Chat",
+                  "uid": "planning_sprint_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for sprint setup?",
+              "uid": "planning_sprint_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "planning_sprint_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Mouse",
+                      "uid": "planning_sprint_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Keyboard",
+                      "uid": "planning_sprint_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Headset",
+                      "uid": "planning_sprint_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Webcam",
+                      "uid": "planning_sprint_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "planning_sprint_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Sprint Setup label",
+              "uid": "planning_sprint_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_sprint_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Sprint Setup notes",
+              "uid": "planning_sprint_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_sprint_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Sprint Setup date",
+              "uid": "planning_sprint_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_sprint_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Sprint Setup priority",
+              "uid": "planning_sprint_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_sprint_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Low",
+                      "uid": "planning_sprint_7_0_0"
+                    },
+                    {
+                      "component_info": "Medium",
+                      "uid": "planning_sprint_7_0_1"
+                    },
+                    {
+                      "component_info": "High",
+                      "uid": "planning_sprint_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Sprint Setup owner",
+              "uid": "planning_sprint_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_sprint_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Sprint Setup summary",
+              "uid": "planning_sprint_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_sprint_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Sprint Setup status",
+              "uid": "planning_sprint_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_sprint_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "planning_sprint_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "planning_sprint_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "planning_sprint_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "generic_data_name": "Meeting Prep",
+          "generic_data_subData": [
+            {
+              "component_name": "Meeting Prep mode",
+              "uid": "planning_meeting_1",
+              "component_data": [
+                {
+                  "name": "Brainstorm",
+                  "uid": "planning_meeting_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Review",
+                  "uid": "planning_meeting_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Decision",
+                  "uid": "planning_meeting_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for meeting prep",
+              "uid": "planning_meeting_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Agenda",
+                  "uid": "planning_meeting_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Slides",
+                  "uid": "planning_meeting_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Notes",
+                  "uid": "planning_meeting_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Demo",
+                  "uid": "planning_meeting_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for meeting prep?",
+              "uid": "planning_meeting_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "planning_meeting_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Email reminder",
+                      "uid": "planning_meeting_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Calendar block",
+                      "uid": "planning_meeting_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Chat ping",
+                      "uid": "planning_meeting_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Follow-up note",
+                      "uid": "planning_meeting_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "planning_meeting_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Meeting Prep label",
+              "uid": "planning_meeting_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_meeting_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Meeting Prep notes",
+              "uid": "planning_meeting_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_meeting_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Meeting Prep date",
+              "uid": "planning_meeting_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_meeting_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Meeting Prep priority",
+              "uid": "planning_meeting_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_meeting_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Small",
+                      "uid": "planning_meeting_7_0_0"
+                    },
+                    {
+                      "component_info": "Medium",
+                      "uid": "planning_meeting_7_0_1"
+                    },
+                    {
+                      "component_info": "Large",
+                      "uid": "planning_meeting_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Meeting Prep owner",
+              "uid": "planning_meeting_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_meeting_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Meeting Prep summary",
+              "uid": "planning_meeting_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_meeting_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Meeting Prep status",
+              "uid": "planning_meeting_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "planning_meeting_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "planning_meeting_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "planning_meeting_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "planning_meeting_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Operations",
+      "is_selected": false,
+      "generic_data": [
+        {
+          "generic_data_name": "Workspace Setup",
+          "is_generic_data_selected": true,
+          "generic_data_subData": [
+            {
+              "component_name": "Workspace Setup mode",
+              "uid": "ops_workspace_1",
+              "component_data": [
+                {
+                  "name": "Standing",
+                  "uid": "ops_workspace_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Standard",
+                  "uid": "ops_workspace_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Shared",
+                  "uid": "ops_workspace_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for workspace setup",
+              "uid": "ops_workspace_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Monitor",
+                  "uid": "ops_workspace_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Dock",
+                  "uid": "ops_workspace_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Whiteboard",
+                  "uid": "ops_workspace_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Phone booth access",
+                  "uid": "ops_workspace_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for workspace setup?",
+              "uid": "ops_workspace_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "ops_workspace_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Drawer unit",
+                      "uid": "ops_workspace_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Shelf box",
+                      "uid": "ops_workspace_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Cable tray",
+                      "uid": "ops_workspace_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Desk lamp",
+                      "uid": "ops_workspace_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "ops_workspace_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Workspace Setup label",
+              "uid": "ops_workspace_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_workspace_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Workspace Setup notes",
+              "uid": "ops_workspace_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_workspace_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Workspace Setup date",
+              "uid": "ops_workspace_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_workspace_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Workspace Setup priority",
+              "uid": "ops_workspace_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_workspace_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Silent",
+                      "uid": "ops_workspace_7_0_0"
+                    },
+                    {
+                      "component_info": "Moderate",
+                      "uid": "ops_workspace_7_0_1"
+                    },
+                    {
+                      "component_info": "Active",
+                      "uid": "ops_workspace_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Workspace Setup owner",
+              "uid": "ops_workspace_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_workspace_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Workspace Setup summary",
+              "uid": "ops_workspace_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_workspace_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Workspace Setup status",
+              "uid": "ops_workspace_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_workspace_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "ops_workspace_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "ops_workspace_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "ops_workspace_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "generic_data_name": "Vendor Review",
+          "generic_data_subData": [
+            {
+              "component_name": "Vendor Review mode",
+              "uid": "ops_vendor_1",
+              "component_data": [
+                {
+                  "name": "Quick check",
+                  "uid": "ops_vendor_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Detailed review",
+                  "uid": "ops_vendor_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Live demo",
+                  "uid": "ops_vendor_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for vendor review",
+              "uid": "ops_vendor_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Price",
+                  "uid": "ops_vendor_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Speed",
+                  "uid": "ops_vendor_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Support",
+                  "uid": "ops_vendor_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Ease of setup",
+                  "uid": "ops_vendor_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for vendor review?",
+              "uid": "ops_vendor_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "ops_vendor_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Security notes",
+                      "uid": "ops_vendor_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Contract notes",
+                      "uid": "ops_vendor_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Reference checks",
+                      "uid": "ops_vendor_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Timeline notes",
+                      "uid": "ops_vendor_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "ops_vendor_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Vendor Review label",
+              "uid": "ops_vendor_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_vendor_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Vendor Review notes",
+              "uid": "ops_vendor_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_vendor_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Vendor Review date",
+              "uid": "ops_vendor_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_vendor_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Vendor Review priority",
+              "uid": "ops_vendor_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_vendor_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Research",
+                      "uid": "ops_vendor_7_0_0"
+                    },
+                    {
+                      "component_info": "Pilot",
+                      "uid": "ops_vendor_7_0_1"
+                    },
+                    {
+                      "component_info": "Approval",
+                      "uid": "ops_vendor_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Vendor Review owner",
+              "uid": "ops_vendor_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_vendor_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Vendor Review summary",
+              "uid": "ops_vendor_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_vendor_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Vendor Review status",
+              "uid": "ops_vendor_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "ops_vendor_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "ops_vendor_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "ops_vendor_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "ops_vendor_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Learning",
+      "is_selected": false,
+      "generic_data": [
+        {
+          "generic_data_name": "Course Tracking",
+          "is_generic_data_selected": true,
+          "generic_data_subData": [
+            {
+              "component_name": "Course Tracking mode",
+              "uid": "learning_course_1",
+              "component_data": [
+                {
+                  "name": "Video",
+                  "uid": "learning_course_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Workshop",
+                  "uid": "learning_course_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Reading",
+                  "uid": "learning_course_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for course tracking",
+              "uid": "learning_course_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Communication",
+                  "uid": "learning_course_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Research",
+                  "uid": "learning_course_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Presentation",
+                  "uid": "learning_course_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Planning",
+                  "uid": "learning_course_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for course tracking?",
+              "uid": "learning_course_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "learning_course_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Quiz",
+                      "uid": "learning_course_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Reflection notes",
+                      "uid": "learning_course_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Peer discussion",
+                      "uid": "learning_course_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Practice task",
+                      "uid": "learning_course_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "learning_course_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Course Tracking label",
+              "uid": "learning_course_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_course_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Course Tracking notes",
+              "uid": "learning_course_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_course_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Course Tracking date",
+              "uid": "learning_course_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_course_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Course Tracking priority",
+              "uid": "learning_course_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_course_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Starter",
+                      "uid": "learning_course_7_0_0"
+                    },
+                    {
+                      "component_info": "Comfortable",
+                      "uid": "learning_course_7_0_1"
+                    },
+                    {
+                      "component_info": "Advanced",
+                      "uid": "learning_course_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Course Tracking owner",
+              "uid": "learning_course_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_course_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Course Tracking summary",
+              "uid": "learning_course_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_course_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Course Tracking status",
+              "uid": "learning_course_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_course_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "learning_course_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "learning_course_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "learning_course_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "generic_data_name": "Event Planning",
+          "generic_data_subData": [
+            {
+              "component_name": "Event Planning mode",
+              "uid": "learning_event_1",
+              "component_data": [
+                {
+                  "name": "Webinar",
+                  "uid": "learning_event_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Meetup",
+                  "uid": "learning_event_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Workshop",
+                  "uid": "learning_event_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for event planning",
+              "uid": "learning_event_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Poster",
+                  "uid": "learning_event_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Registration form",
+                  "uid": "learning_event_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Slides",
+                  "uid": "learning_event_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Checklist",
+                  "uid": "learning_event_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for event planning?",
+              "uid": "learning_event_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "learning_event_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Name tags",
+                      "uid": "learning_event_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Photo corner",
+                      "uid": "learning_event_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Refreshments",
+                      "uid": "learning_event_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Feedback form",
+                      "uid": "learning_event_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "learning_event_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Event Planning label",
+              "uid": "learning_event_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_event_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Event Planning notes",
+              "uid": "learning_event_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_event_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Event Planning date",
+              "uid": "learning_event_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_event_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Event Planning priority",
+              "uid": "learning_event_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_event_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Small",
+                      "uid": "learning_event_7_0_0"
+                    },
+                    {
+                      "component_info": "Medium",
+                      "uid": "learning_event_7_0_1"
+                    },
+                    {
+                      "component_info": "Large",
+                      "uid": "learning_event_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Event Planning owner",
+              "uid": "learning_event_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_event_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Event Planning summary",
+              "uid": "learning_event_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_event_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Event Planning status",
+              "uid": "learning_event_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "learning_event_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "learning_event_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "learning_event_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "learning_event_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lifestyle",
+      "is_selected": false,
+      "generic_data": [
+        {
+          "generic_data_name": "Travel Setup",
+          "is_generic_data_selected": true,
+          "generic_data_subData": [
+            {
+              "component_name": "Travel Setup mode",
+              "uid": "life_travel_1",
+              "component_data": [
+                {
+                  "name": "Relaxed",
+                  "uid": "life_travel_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Adventure",
+                  "uid": "life_travel_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Cultural",
+                  "uid": "life_travel_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for travel setup",
+              "uid": "life_travel_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Tickets",
+                  "uid": "life_travel_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Stay",
+                  "uid": "life_travel_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Local transport",
+                  "uid": "life_travel_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Budget tracker",
+                  "uid": "life_travel_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for travel setup?",
+              "uid": "life_travel_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "life_travel_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Clothes",
+                      "uid": "life_travel_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Chargers",
+                      "uid": "life_travel_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Documents",
+                      "uid": "life_travel_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Snacks",
+                      "uid": "life_travel_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "life_travel_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Travel Setup label",
+              "uid": "life_travel_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_travel_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Travel Setup notes",
+              "uid": "life_travel_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_travel_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Travel Setup date",
+              "uid": "life_travel_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_travel_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Travel Setup priority",
+              "uid": "life_travel_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_travel_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Lean",
+                      "uid": "life_travel_7_0_0"
+                    },
+                    {
+                      "component_info": "Balanced",
+                      "uid": "life_travel_7_0_1"
+                    },
+                    {
+                      "component_info": "Flexible",
+                      "uid": "life_travel_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Travel Setup owner",
+              "uid": "life_travel_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_travel_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Travel Setup summary",
+              "uid": "life_travel_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_travel_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Travel Setup status",
+              "uid": "life_travel_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_travel_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "life_travel_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "life_travel_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "life_travel_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "generic_data_name": "Hobby Club",
+          "generic_data_subData": [
+            {
+              "component_name": "Hobby Club mode",
+              "uid": "life_hobby_1",
+              "component_data": [
+                {
+                  "name": "Weekly hangout",
+                  "uid": "life_hobby_1_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Project circle",
+                  "uid": "life_hobby_1_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Challenge group",
+                  "uid": "life_hobby_1_2",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Items to include for hobby club",
+              "uid": "life_hobby_2",
+              "multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Show and tell",
+                  "uid": "life_hobby_2_0",
+                  "type": "selection"
+                },
+                {
+                  "name": "Mini challenge",
+                  "uid": "life_hobby_2_1",
+                  "type": "selection"
+                },
+                {
+                  "name": "Peer feedback",
+                  "uid": "life_hobby_2_2",
+                  "type": "selection"
+                },
+                {
+                  "name": "Resource swap",
+                  "uid": "life_hobby_2_3",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Need extras for hobby club?",
+              "uid": "life_hobby_3",
+              "have_option": true,
+              "sub_data_multiple_selection": true,
+              "component_data": [
+                {
+                  "name": "Yes",
+                  "uid": "life_hobby_3_0",
+                  "type": "selection",
+                  "multiple_selection": true,
+                  "sub_data": [
+                    {
+                      "name": "Calendar",
+                      "uid": "life_hobby_3_0_0",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Chat alert",
+                      "uid": "life_hobby_3_0_1",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Email digest",
+                      "uid": "life_hobby_3_0_2",
+                      "type": "selection"
+                    },
+                    {
+                      "name": "Reminder note",
+                      "uid": "life_hobby_3_0_3",
+                      "type": "selection"
+                    }
+                  ]
+                },
+                {
+                  "name": "No",
+                  "uid": "life_hobby_3_1",
+                  "type": "selection"
+                }
+              ]
+            },
+            {
+              "component_name": "Hobby Club label",
+              "uid": "life_hobby_4",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_hobby_4_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter label",
+                  "placeholder": "Type label",
+                  "max_length": 50
+                }
+              ]
+            },
+            {
+              "component_name": "Hobby Club notes",
+              "uid": "life_hobby_5",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_hobby_5_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Add notes",
+                  "placeholder": "Write notes",
+                  "max_length": 240
+                }
+              ]
+            },
+            {
+              "component_name": "Hobby Club date",
+              "uid": "life_hobby_6",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_hobby_6_0",
+                  "type": "date_picker",
+                  "hint": "Select date"
+                }
+              ]
+            },
+            {
+              "component_name": "Hobby Club priority",
+              "uid": "life_hobby_7",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_hobby_7_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Calm",
+                      "uid": "life_hobby_7_0_0"
+                    },
+                    {
+                      "component_info": "Balanced",
+                      "uid": "life_hobby_7_0_1"
+                    },
+                    {
+                      "component_info": "High energy",
+                      "uid": "life_hobby_7_0_2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "component_name": "Hobby Club owner",
+              "uid": "life_hobby_8",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_hobby_8_0",
+                  "type": "input_single_line",
+                  "input_type": "text",
+                  "hint": "Enter owner name",
+                  "placeholder": "Type owner",
+                  "max_length": 60
+                }
+              ]
+            },
+            {
+              "component_name": "Hobby Club summary",
+              "uid": "life_hobby_9",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_hobby_9_0",
+                  "type": "input_multiline",
+                  "input_type": "text",
+                  "hint": "Write summary",
+                  "placeholder": "Add summary",
+                  "max_length": 260
+                }
+              ]
+            },
+            {
+              "component_name": "Hobby Club status",
+              "uid": "life_hobby_10",
+              "component_data": [
+                {
+                  "name": "",
+                  "uid": "life_hobby_10_0",
+                  "type": "drop_down",
+                  "hint": "Select",
+                  "drop_down": [
+                    {
+                      "component_info": "Not started",
+                      "uid": "life_hobby_10_0_0"
+                    },
+                    {
+                      "component_info": "In progress",
+                      "uid": "life_hobby_10_0_1"
+                    },
+                    {
+                      "component_info": "Ready",
+                      "uid": "life_hobby_10_0_2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
