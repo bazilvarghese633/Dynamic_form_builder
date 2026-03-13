@@ -1,11 +1,13 @@
 import '../../domain/entities/form_entity.dart';
 
 class FormModel extends FormEntity {
-  FormModel({required super.name, required super.genericData});
+  FormModel({required super.id, required super.name, required super.genericData});
 
   factory FormModel.fromJson(Map<String, dynamic> json) {
+    final name = json['name'] as String;
     return FormModel(
-      name: json['name'],
+      id: name.toLowerCase().replaceAll(' ', '_'),
+      name: name,
       genericData: (json['generic_data'] as List)
           .map((e) => GenericDataModel.fromJson(e))
           .toList(),

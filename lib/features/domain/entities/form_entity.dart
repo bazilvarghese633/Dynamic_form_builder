@@ -1,8 +1,9 @@
 class FormEntity {
+  final String id;
   final String name;
   final List<GenericDataEntity> genericData;
 
-  FormEntity({required this.name, required this.genericData});
+  FormEntity({required this.id, required this.name, required this.genericData});
 }
 
 class GenericDataEntity {

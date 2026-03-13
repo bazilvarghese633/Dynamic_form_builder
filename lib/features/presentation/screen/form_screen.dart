@@ -1,6 +1,8 @@
+import 'package:dynamic_form_builder/core/color.dart';
+import 'package:dynamic_form_builder/features/domain/entities/form_entity.dart';
 import 'package:dynamic_form_builder/features/presentation/bloc/form_bloc.dart';
 import 'package:dynamic_form_builder/features/presentation/bloc/form_state.dart';
-import 'package:dynamic_form_builder/features/presentation/widgets/question_widgets.dart';
+import 'package:dynamic_form_builder/features/presentation/widgets/main_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,45 +11,107 @@ class FormScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Dynamic Form')),
-      body: BlocBuilder<FormBloc, DynamicFormState>(
+    return BlocListener<FormBloc, DynamicFormState>(
+      listener: (context, state) {
+        if (state is SubmissionActionSuccess) {
+          _showSnack(
+            context,
+            state.message,
+            green700,
+            Icons.check_circle_rounded,
+          );
+        }
+        if (state is FormError) {
+          _showSnack(context, state.message, red700, Icons.error_rounded);
+        }
+      },
+      child: BlocBuilder<FormBloc, DynamicFormState>(
         builder: (context, state) {
-          if (state is FormLoading) {
-            return const Center(child: CircularProgressIndicator());
-          }
-
-          if (state is FormLoaded) {
-            final forms = state.forms;
-
-            return DefaultTabController(
-              length: forms.length,
-              child: Column(
+          return Scaffold(
+            backgroundColor: scaffbackgroundColor,
+            appBar: AppBar(
+              backgroundColor: appBarbackgroundColor,
+              foregroundColor: whiteColor,
+              elevation: 0,
+              centerTitle: false,
+              title: const Row(
                 children: [
-                  TabBar(tabs: forms.map((e) => Tab(text: e.name)).toList()),
-                  Expanded(
-                    child: TabBarView(
-                      children: forms.map((tab) {
-                        return ListView(
-                          children: tab.genericData.map((subTab) {
-                            return ExpansionTile(
-                              title: Text(subTab.name),
-                              children: subTab.questions
-                                  .map((q) => QuestionWidget(q))
-                                  .toList(),
-                            );
-                          }).toList(),
-                        );
-                      }).toList(),
+                  Icon(
+                    Icons.dynamic_form_rounded,
+                    size: 22,
+                    color: Color(0xFF7C83FD),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    'FormBuilder',
+                    style: TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.3,
+                      color: Colors.white,
                     ),
                   ),
                 ],
               ),
-            );
-          }
-
-          return Container();
+            ),
+            body: _buildBody(context, state),
+          );
         },
+      ),
+    );
+  }
+
+  Widget _buildBody(BuildContext context, DynamicFormState state) {
+    if (state is FormLoading) {
+      return const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircularProgressIndicator(color: Color(0xFF7C83FD)),
+            SizedBox(height: 16),
+            Text(
+              'Loading...',
+              style: TextStyle(color: Colors.grey, fontSize: 14),
+            ),
+          ],
+        ),
+      );
+    }
+
+    List<FormEntity>? forms;
+    if (state is FormLoaded) forms = state.forms;
+    if (state is FormSaved) forms = state.forms;
+    if (state is SubmissionActionSuccess) forms = state.forms;
+    if (state is FormError && state.forms != null) forms = state.forms;
+
+    if (forms != null && forms.isNotEmpty) {
+      return MainTabs(forms: forms);
+    }
+
+    return const Center(child: Text('No forms available'));
+  }
+
+  void _showSnack(
+    BuildContext context,
+    String msg,
+    Color color,
+    IconData icon,
+  ) {
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            Icon(icon, color: whiteColor, size: 18),
+            const SizedBox(width: 10),
+            Expanded(child: Text(msg, style: const TextStyle(fontSize: 14))),
+          ],
+        ),
+        backgroundColor: color,
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        duration: const Duration(seconds: 2),
       ),
     );
   }

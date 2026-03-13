@@ -12,23 +12,39 @@ class MainTabs extends StatelessWidget {
     return DefaultTabController(
       length: forms.length,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            color: Colors.grey.shade200,
+            color: const Color(0xFF1A1A2E),
             child: TabBar(
               isScrollable: true,
-              labelColor: Colors.black,
-              tabs: forms.map((form) {
-                return Tab(text: form.name);
-              }).toList(),
+              tabAlignment: TabAlignment.start,
+              indicatorColor: const Color(0xFF7C83FD),
+              indicatorWeight: 3,
+              indicatorSize: TabBarIndicatorSize.label,
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.white38,
+              labelStyle: const TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 14,
+                letterSpacing: 0.4,
+              ),
+              unselectedLabelStyle: const TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              tabs: forms.map((f) => Tab(text: f.name.toUpperCase())).toList(),
             ),
           ),
-
           Expanded(
             child: TabBarView(
-              children: forms.map((form) {
-                return SubTabs(genericData: form.genericData);
-              }).toList(),
+              children: forms
+                  .map(
+                    (f) =>
+                        SubTabs(formName: f.name, genericData: f.genericData),
+                  )
+                  .toList(),
             ),
           ),
         ],
