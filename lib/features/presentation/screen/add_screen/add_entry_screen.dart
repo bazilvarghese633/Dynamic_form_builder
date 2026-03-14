@@ -48,7 +48,11 @@ class _AddEntryScreenState extends State<AddEntryScreen> {
           ? (bloc.state as FormLoaded).answers
           : {};
       bloc.add(
-        EditSubmissionEvent(widget.editDocId!, answers as Map<String, dynamic>),
+        EditSubmissionEvent(
+          widget.editDocId!,
+          answers as Map<String, dynamic>,
+          questions: widget.section.questions, // pass for validation
+        ),
       );
     } else {
       bloc.add(SaveFormEvent(widget.formName, widget.section.name));

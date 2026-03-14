@@ -1,3 +1,5 @@
+import 'package:dynamic_form_builder/features/domain/entities/form_entity.dart';
+
 abstract class FormEvent {}
 
 class LoadFormEvent extends FormEvent {}
@@ -24,7 +26,8 @@ class ClearAnswersEvent extends FormEvent {}
 class EditSubmissionEvent extends FormEvent {
   final String documentId;
   final Map<String, dynamic> answers;
-  EditSubmissionEvent(this.documentId, this.answers);
+  final List<QuestionEntity>? questions; // for validation
+  EditSubmissionEvent(this.documentId, this.answers, {this.questions});
 }
 
 class DeleteSubmissionEvent extends FormEvent {

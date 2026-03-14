@@ -1,68 +1,60 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:dynamic_form_builder/core/utils/device_id_service.dart';
+
 class FirestoreService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+  /// Returns the collection ref scoped to this device only.
+  /// Path: device_submissions/{deviceId}/form_submissions
+  Future<CollectionReference> _collection() async {
+    final deviceId = await DeviceIdService.getDeviceId();
+    return _firestore
+        .collection('device_submissions')
+        .doc(deviceId)
+        .collection('form_submissions');
+  }
 
   Future<void> saveFormSubmission({
     required String formName,
     required String sectionName,
     required Map<String, dynamic> answers,
   }) async {
-    try {
-      final docRef = await _firestore.collection('form_submissions').add({
-        'formName': formName,
-        'sectionName': sectionName,
-        'answers': _sanitizeAnswers(answers),
-        'timestamp': FieldValue.serverTimestamp(),
-      });
-      print('✅ Form saved with ID: ${docRef.id}');
-    } catch (e) {
-      print('❌ Error saving form: $e');
-      throw Exception('Failed to save form submission: $e');
-    }
-  }
-
-  Future<void> deleteSubmission(String documentId) async {
-    try {
-      await _firestore.collection('form_submissions').doc(documentId).delete();
-      print('✅ Deleted: $documentId');
-    } catch (e) {
-      throw Exception('Failed to delete submission: $e');
-    }
+    final col = await _collection();
+    await col.add({
+      'formName': formName,
+      'sectionName': sectionName,
+      'answers': _sanitize(answers),
+      'timestamp': FieldValue.serverTimestamp(),
+    });
   }
 
   Future<void> updateSubmission({
     required String documentId,
     required Map<String, dynamic> answers,
   }) async {
-    try {
-      await _firestore.collection('form_submissions').doc(documentId).update({
-        'answers': _sanitizeAnswers(answers),
-        'updatedAt': FieldValue.serverTimestamp(),
-      });
-      print('✅ Updated: $documentId');
-    } catch (e) {
-      throw Exception('Failed to update submission: $e');
-    }
+    final col = await _collection();
+    await col.doc(documentId).update({
+      'answers': _sanitize(answers),
+      'updatedAt': FieldValue.serverTimestamp(),
+    });
   }
 
-  Stream<QuerySnapshot> getFormSubmissions(
-    String formName,
-    String sectionName,
-  ) {
-    return _firestore
-        .collection('form_submissions')
-        .orderBy('timestamp', descending: true)
-        .snapshots();
+  Future<void> deleteSubmission(String documentId) async {
+    final col = await _collection();
+    await col.doc(documentId).delete();
   }
 
-  /// Converts DateTime values to ISO 8601 strings so Firestore stores them
-  /// as plain strings that round-trip cleanly back to DateTime.
-  Map<String, dynamic> _sanitizeAnswers(Map<String, dynamic> answers) {
+  Future<Stream<QuerySnapshot>> getSubmissionsStream() async {
+    final col = await _collection();
+    return col.orderBy('timestamp', descending: true).snapshots();
+  }
+
+  /// Converts DateTime → ISO string so Firestore stores it
+  /// as a parseable string inside the answers map.
+  Map<String, dynamic> _sanitize(Map<String, dynamic> answers) {
     return answers.map((key, value) {
-      if (value is DateTime) {
-        return MapEntry(key, value.toIso8601String());
-      }
+      if (value is DateTime) return MapEntry(key, value.toIso8601String());
       return MapEntry(key, value);
     });
   }

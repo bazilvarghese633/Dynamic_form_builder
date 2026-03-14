@@ -2,9 +2,9 @@ import 'package:dynamic_form_builder/core/color.dart';
 import 'package:dynamic_form_builder/features/domain/entities/form_entity.dart';
 import 'package:dynamic_form_builder/features/presentation/bloc/form_bloc.dart';
 import 'package:dynamic_form_builder/features/presentation/bloc/form_event.dart';
+import 'package:dynamic_form_builder/features/presentation/widgets/question/input_decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'input_decoration.dart';
 
 class StyledTextField extends StatefulWidget {
   final QuestionEntity question;
@@ -26,12 +26,32 @@ class StyledTextField extends StatefulWidget {
 
 class _StyledTextFieldState extends State<StyledTextField> {
   late final TextEditingController _controller;
+  late final FocusNode _focusNode;
+  String? _errorText;
 
   @override
   void initState() {
     super.initState();
     final existing = widget.answers[widget.question.uid];
     _controller = TextEditingController(text: existing?.toString() ?? '');
+    _focusNode = FocusNode();
+    _focusNode.addListener(_onFocusChange);
+  }
+
+  void _onFocusChange() {
+    // Show error only after user has interacted and left the field
+    if (!_focusNode.hasFocus) {
+      setState(() {
+        final text = _controller.text;
+        if (text.isEmpty) {
+          _errorText = 'This field is required';
+        } else if (text.trim().isEmpty) {
+          _errorText = 'Cannot be spaces only';
+        } else {
+          _errorText = null;
+        }
+      });
+    }
   }
 
   @override
@@ -47,6 +67,7 @@ class _StyledTextFieldState extends State<StyledTextField> {
   @override
   void dispose() {
     _controller.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
@@ -56,15 +77,20 @@ class _StyledTextFieldState extends State<StyledTextField> {
       padding: const EdgeInsets.only(bottom: 6),
       child: TextField(
         controller: _controller,
+        focusNode: _focusNode,
         maxLines: widget.maxLines,
         maxLength: widget.option.maxLength,
         style: const TextStyle(fontSize: 14, color: kDark),
-        onChanged: (v) => context.read<FormBloc>().add(
-          UpdateAnswerEvent(widget.question.uid, v),
-        ),
+        onChanged: (v) {
+          // Clear inline error while typing
+          if (_errorText != null) setState(() => _errorText = null);
+          context.read<FormBloc>().add(
+            UpdateAnswerEvent(widget.question.uid, v),
+          );
+        },
         decoration: inputDecoration(
           widget.option.hint,
-        ).copyWith(hintText: widget.option.placeholder),
+        ).copyWith(hintText: widget.option.placeholder, errorText: _errorText),
       ),
     );
   }
