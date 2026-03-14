@@ -1,5 +1,5 @@
 import 'package:dynamic_form_builder/features/domain/entities/form_entity.dart';
-import 'package:dynamic_form_builder/features/presentation/widgets/sub_tab.dart';
+import 'package:dynamic_form_builder/features/presentation/widgets/subtab/sub_tab.dart';
 import 'package:flutter/material.dart';
 
 class MainTabs extends StatelessWidget {

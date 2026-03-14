@@ -24,13 +24,13 @@ class FormSaving extends DynamicFormState {
   FormSaving(this.forms, this.answers);
 }
 
-/// Form was saved — go back to submissions list
+// Form  saved  go back to submissions list
 class FormSaved extends DynamicFormState {
   final List<FormEntity> forms;
   FormSaved(this.forms);
 }
 
-/// In-place success for edit / delete (snackbar only, no navigation)
+// In-place success for edit / delete snackbar only, no navigation
 class SubmissionActionSuccess extends DynamicFormState {
   final String message;
   final List<FormEntity> forms;

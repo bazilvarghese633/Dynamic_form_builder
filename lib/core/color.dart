@@ -16,3 +16,6 @@ final red700 = Colors.red.shade700;
 
 final scaffbackgroundColor = const Color(0xFFF0F2F8);
 final appBarbackgroundColor = const Color(0xFF1A1A2E);
+
+const kAccent = Color(0xFF7C83FD);
+const kDark = Color(0xFF1A1A2E);
